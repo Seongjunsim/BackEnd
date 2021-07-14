@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "echo \"Hello,World\""
+    "test": "echo \"Hello,World\"",
+    "go" : "node code/07_14/main.js"
   },
   "repository": {
     "type": "git",
