@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "echo \"Hello,World\"",
+    "test": "jest",
     "go": "node code/07_14/main.js"
   },
   "repository": {
@@ -9,14 +9,19 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/jest": "^26.0.24",
     "@types/node": "^16.3.1",
+    "@types/supertest": "^2.0.11",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
+    "pug": "^3.0.2",
+    "supertest": "^6.1.3",
     "typescript": "^4.3.5"
   },
   "dependencies": {
