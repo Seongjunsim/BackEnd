@@ -1,8 +1,12 @@
 const express = require('express');
+const multer = require('multer');
+
+const upload = multer({ dest: 'uploads/' });
 
 const USERS = {
   15: {
     nickname: 'foo',
+    profileImage: undefined,
   },
 };
 
@@ -38,6 +42,8 @@ userRouter.get('/:id', (req, res) => {
   } else if (resMineType === 'html') {
     res.render('user-profile', {
       nickname: req.user.nickname,
+      userId: req.params.id,
+      profileImageURL: `/uploads/${req.user.profileImage}`,
     });
   }
 });
@@ -53,6 +59,14 @@ userRouter.post('/:id/nickname', (req, res) => {
 
   user.nickname = nickname;
   res.send(`User nickname ${nickname}`);
+});
+
+userRouter.post('/:id/profile', upload.single('profile'), (req, res, next) => {
+  const { user } = req;
+  user.profileImage = req.file.filename;
+
+  console.log(req.file);
+  res.send(`Uploa image file: ${req.file.filename}`);
 });
 
 module.exports = userRouter;

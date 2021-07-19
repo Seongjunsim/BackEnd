@@ -24,13 +24,14 @@ const PORT = 5000;
 
 app.use(express.json());
 app.use(express.static('code/07_16/public'));
+
 app.set('views', 'code/07_16/views');
 app.set('view engine', 'pug');
 
 const userRouter = require('./routers/user');
 
 app.use('/users', userRouter);
-
+app.use('/uploads', express.static('code/07_16/uploads'));
 app.get('/', (req, res) => {
   res.render('index', {
     message: 'hello pug!',

@@ -8,14 +8,11 @@ const app = require('./app');
 
 const request = supertext(app);
 
-test[
-  ('our first test',
-  async () => {
-    const result = await request.get('/users/15').accept('application/json');
-    console.log(result);
+test('our first test', async () => {
+  const result = await request.get('/users/15').accept('application/json');
+  console.log(result);
 
-    expect(result.body).toMatchObject({
-      ninkname: expect.any(String),
-    });
-  })
-];
+  expect(result.body).toMatchObject({
+    ninkname: expect.any(String),
+  });
+});
