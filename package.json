@@ -3,6 +3,9 @@
     "test": "jest",
     "go": "node code/07_14/main.js"
   },
+  "engines": {
+    "node": "14.16.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Seongjunsim/BackEnd.git"
@@ -28,7 +31,17 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "httpie": "^1.1.2",
+    "koa": "^2.13.1",
+    "koa-mount": "^4.0.0",
+    "koa-pug": "^5.0.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^5.0.0",
+    "koa-websocket": "^6.0.0",
     "mongodb": "^4.0.0",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.1",
+    "sharp": "^0.28.3",
+    "tailwindcss": "^2.2.4",
+    "unsplash-js": "^7.0.15"
   }
 }
